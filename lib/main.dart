@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+  num both = 30.4;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Learning Flutter Thoroughly'),
+          centerTitle: true,
+        ),
+        body: Center(
+          child: Column(
+            children: [
+              Text('$both'),
+              ElevatedButton(onPressed: () {}, child: Text('Click'))
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
